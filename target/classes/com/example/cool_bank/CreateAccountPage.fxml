@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cool_bank.CreateAccountPageController">
+   <center>
+
+            <VBox alignment="CENTER" prefHeight="546.0" prefWidth="558.0" spacing="20.0" style="-fx-background-color: #C0C0C0;" HBox.hgrow="ALWAYS">
+               <Label text="Email" />
+               <TextField fx:id="email" maxWidth="250" style="-fx-border-color: black;" />
+               <Label text="Password" />
+               <TextField fx:id="password" maxWidth="250" style="-fx-border-color: black;" />
+               <Label text="SSN" />
+               <TextField fx:id="ssn" maxWidth="250" style="-fx-border-color: black;" />
+               <Label text="Initial Deposit" />
+               <TextField fx:id="dep" maxWidth="250" style="-fx-border-color: black;" />
+
+                <Button onAction="#onCreateAccountButtonClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="CreateAccount" />
+            </VBox>
+         
+   </center>
+   <top>
+      <HBox prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onBackButtonClick" style="-fx-background-color: #708090;" text="Back" />
+         </children></HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cool_bank.Login_PageController">
+   <center>
+      <VBox alignment="CENTER" prefWidth="242.0" spacing="20.0" style="-fx-background-color: #C0C0C0; -fx-text-fill: white; -fx-font-size: 16px;">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <ImageView fx:id="imageView" fitHeight="92.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+              <Image url="@cb_logo.png" />
+          </ImageView>
+      
+          <Label text="Username" />
+      
+          <TextField fx:id="UsernameField" maxWidth="250" style="-fx-border-color: black;" />
+      
+          <Label text="Password" />
+          <PasswordField fx:id="Password_Field" maxWidth="250" style="-fx-border-color: black; " />
+         <Label fx:id="Error_Field" />
+      
+          <Button onAction="#onPasswordChangeButtonClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Change Password" />
+      
+
+      
+          <Button onAction="#onLoginClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Login" />
+      
+          <Button onAction="#onCreateAccountButtonClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Create Account" />
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="42.0" prefWidth="242.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <HBox prefHeight="48.0" prefWidth="242.0" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

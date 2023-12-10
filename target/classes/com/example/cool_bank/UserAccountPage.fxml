@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="485.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cool_bank.UserAccountPageController">
+
+    <center>
+        <VBox alignment="CENTER" prefWidth="407.0" spacing="20.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <Label fx:id="Lable" alignment="CENTER" contentDisplay="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="Balance">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+             <TextField fx:id="PaymentField" maxWidth="250" style="-fx-border-color: black;" />
+            <Button mnemonicParsing="false" onAction="#onMakeDeposit" prefHeight="38.0" prefWidth="167.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Make Deposit" />
+             <Button mnemonicParsing="false" onAction="#onWithdraw" prefHeight="38.0" prefWidth="167.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Withdraw" />
+
+             <Button mnemonicParsing="false" onAction="#onTakeLoan" prefHeight="38.0" prefWidth="167.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Take Loan" />
+            <Button layoutX="249.0" layoutY="327.0" mnemonicParsing="false" onAction="#onMakePayment" prefHeight="38.0" prefWidth="167.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Make Payment" />
+         </children></VBox>
+
+
+    </center>
+    <right>
+        <VBox prefHeight="1000.0" prefWidth="300.0" snapToPixel="false" style="-fx-background-color: #C0C7C0;" BorderPane.alignment="CENTER">
+            <ScrollPane prefHeight="1000.0" prefWidth="300.0">
+                <content>
+                    <VBox fx:id="TransactionsVbox" alignment="TOP_CENTER" prefHeight="1000.0" prefWidth="300.0" spacing="5.0" style="-fx-background-color: #C0C7C0;">
+
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+
+
+    </right>
+   <bottom>
+       <HBox alignment="BOTTOM_CENTER" prefHeight="48.0" prefWidth="646.0" spacing="20" style="-fx-background-color: #708090;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onCheckBalance" prefHeight="38.0" prefWidth="167.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Check Account Balance" />
+            <Button mnemonicParsing="false" onAction="#onCheckLoanBalance" prefHeight="37.0" prefWidth="139.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Check Loan Balance" />
+            <Button layoutX="357.0" layoutY="20.0" mnemonicParsing="false" onAction="#onCheckTransactions" prefHeight="37.0" prefWidth="139.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Transaction History" />
+         </children></HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="40.0" prefWidth="646.0" spacing="20" style="-fx-background-color: #708090;" BorderPane.alignment="CENTER">
+         <children>
+             <Button onAction="#onLogOutClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Log Out" />
+            <Button mnemonicParsing="false" onAction="#onPasswordChange" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Change Password" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
